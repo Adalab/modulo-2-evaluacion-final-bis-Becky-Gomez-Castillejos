@@ -6,7 +6,7 @@ fetch('https://randomuser.me/api/?results=10')
     .then((data) => {
         people = data.results.map((eachUser) => {
             const object = {
-                id: eachUser.id, 
+                id: eachUser.id.value + eachUser.id.name, 
                 picture: eachUser.picture.medium,
                 name: eachUser.name.first,
                 location: eachUser.location.city,
@@ -41,6 +41,7 @@ function renderPeople() {
         <p>${listEl.userName}</p>
         </article></li>`;
     }
+    addEventListeners(); //por qué se llama esta función en renderPeople?
 
 
     /*const liList = document.querySelectorAll(".js_li");
