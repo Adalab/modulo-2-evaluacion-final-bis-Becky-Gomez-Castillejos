@@ -17,7 +17,7 @@ function handleClickCharacters(event) {
         } else {
             selectedProfile.isFriend = false;
         }
-        event.currentTarget.classList.toggle("selected");
+        event.currentTarget.classList.toggle("selected");//event.currentTarget se refiere al elemento clickado (al cual se le pueden añadir clases css) y el selectedProfile al objeto en sí. 
         console.log(people);
     }
     
