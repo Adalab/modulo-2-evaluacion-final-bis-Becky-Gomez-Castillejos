@@ -20,26 +20,4 @@ function handleClickCharacters(event) {
         event.currentTarget.classList.toggle("selected");//event.currentTarget se refiere al elemento clickado (al cual se le pueden añadir clases css) y el selectedProfile al objeto en sí. 
         console.log(people);
     }
-    
-
-
-    
-
-
-
-
-    
-
-    /*if (charactersInFavouritesIndex === -1) {
-        favouriteCharacters.push(selectedCharacter);
-
-        localStorage.setItem('favourites', JSON.stringify(favouriteCharacters));
-    }
-    else {
-        favouriteCharacters.splice(charactersInFavouritesIndex, 1);
-        localStorage.setItem('favourites', JSON.stringify(favouriteCharacters));
-    }
-
-    addFavourites();*/
-
 

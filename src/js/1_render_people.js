@@ -13,24 +13,15 @@ fetch('https://randomuser.me/api/?results=10')
                 userName: eachUser.login.username,
                 isFriend: false 
             }
-            
             return object;
+
         });
+
         console.log(people);
         renderPeople();
-        
-        
+
     });
     
-
-/*const savedFavourites = JSON.parse(localStorage.getItem('favourites'));
-console.log(savedFavourites);
-if (savedFavourites !== null) {
-    favouriteCharacters = savedFavourites;
-    addFavourites();
-}*/
-
-
 //cuando se quiere pintar un elemento se puede poner el la contante del elemento en vacío y luego rellenarlo
 function renderPeople() { 
     list.innerHTML = '';
@@ -42,11 +33,7 @@ function renderPeople() {
         <p>${listEl.userName}</p>
         </article></li>`;
     }
+    
     addEventListeners(); //por qué se llama esta función en renderPeople?
-
-
-    /*const liList = document.querySelectorAll(".js_li");
-    for (const liEl of liList) {
-        liEl.addEventListener("click", handleClickCharacters);
-    }*/
+    
 }
