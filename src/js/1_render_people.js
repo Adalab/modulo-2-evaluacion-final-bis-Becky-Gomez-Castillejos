@@ -14,7 +14,6 @@ fetch('https://randomuser.me/api/?results=10')
                 isFriend: false 
             }
             return object;
-
         });
 
         console.log(people);
