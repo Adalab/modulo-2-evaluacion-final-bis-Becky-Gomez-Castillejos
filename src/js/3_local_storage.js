@@ -9,10 +9,11 @@ function recoverUsers() {//cómo se traduciría a lenguaje humano: si el array p
     
     let localArray = JSON.parse(localStorage.getItem('array'));
     console.log(localArray);
-    if(localArray !== people)
+    if(localArray !== people) {
         people = localArray;
         renderPeople();
-    
+        
+    }
 }
 
 

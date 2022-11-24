@@ -2,7 +2,7 @@
 
 function addEventListeners() {
     const liPeople = document.querySelectorAll(".js_li");
-    for(const person of liPeople) {//por qué no vale people aquí??
+    for(const person of liPeople) {//por qué no vale people aquí??: porque people es un array del API y no se puede clicar en él, sobre lo que hago click es el elemento HTML (el cual está metido en un bucle con map).
         person.addEventListener("click", handleClickCharacters);
     }
 }
@@ -20,26 +20,6 @@ function handleClickCharacters(event) {
         event.currentTarget.classList.toggle("selected");//event.currentTarget se refiere al elemento clickado (al cual se le pueden añadir clases css) y el selectedProfile al objeto en sí. 
         console.log(people);
     }
-    
 
-
-    
-
-
-
-
-    
-
-    /*if (charactersInFavouritesIndex === -1) {
-        favouriteCharacters.push(selectedCharacter);
-
-        localStorage.setItem('favourites', JSON.stringify(favouriteCharacters));
-    }
-    else {
-        favouriteCharacters.splice(charactersInFavouritesIndex, 1);
-        localStorage.setItem('favourites', JSON.stringify(favouriteCharacters));
-    }
-
-    addFavourites();*/
 
 
