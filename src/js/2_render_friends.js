@@ -2,7 +2,7 @@
 
 function addEventListeners() {
     const liPeople = document.querySelectorAll(".js_li");
-    for(const person of liPeople) {//por qué no vale people aquí??
+    for(const person of liPeople) {
         person.addEventListener("click", handleClickCharacters);
     }
 }
@@ -17,7 +17,7 @@ function handleClickCharacters(event) {
         } else {
             selectedProfile.isFriend = false;
         }
-        event.currentTarget.classList.toggle("selected");//event.currentTarget se refiere al elemento clickado (al cual se le pueden añadir clases css) y el selectedProfile al objeto en sí. 
+        event.currentTarget.classList.toggle("selected"); 
         console.log(people);
     }
 

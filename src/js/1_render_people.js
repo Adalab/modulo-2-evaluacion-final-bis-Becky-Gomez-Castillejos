@@ -22,7 +22,6 @@ fetch('https://randomuser.me/api/?results=10')
 
     });
     
-//cuando se quiere pintar un elemento se puede poner el la contante del elemento en vacío y luego rellenarlo
 function renderPeople() { 
     list.innerHTML = '';
     for (const listEl of people) {
@@ -33,7 +32,7 @@ function renderPeople() {
         <p>${listEl.userName}</p>
         </article></li>`;
     }
-    
-    addEventListeners(); //por qué se llama esta función en renderPeople?
+
+    addEventListeners(); 
     
 }
