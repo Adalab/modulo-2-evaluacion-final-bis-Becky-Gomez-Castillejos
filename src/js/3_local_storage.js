@@ -8,10 +8,11 @@ function saveUsers() {
 function recoverUsers() {
     let localArray = JSON.parse(localStorage.getItem('array'));
     console.log(localArray);
-    if(localArray !== people)
+    if(localArray !== people) {
         people = localArray;
         renderPeople();
-    
+        
+    }
 }
 
 btn.addEventListener("click", saveUsers);

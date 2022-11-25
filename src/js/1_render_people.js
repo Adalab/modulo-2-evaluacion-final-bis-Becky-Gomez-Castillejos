@@ -14,24 +14,42 @@ fetch('https://randomuser.me/api/?results=10')
                 isFriend: false 
             }
             return object;
+
         });
+
 
         console.log(people);
         renderPeople();
 
+
     });
     
+//cuando se quiere pintar un elemento se puede poner el la contante del elemento en vacío y luego rellenarlo
 function renderPeople() { 
     list.innerHTML = '';
-    for (const listEl of people) {
-        list.innerHTML += `<li class= "js_li" id="${listEl.id}"><article>
-        <img src=${listEl.picture} alt="foto personaje" class="photo" />
-        <p>${listEl.name}</p>
-        <p>${listEl.location}</p>
-        <p>${listEl.userName}</p>
-        </article></li>`;
+    const peopleMap = people.map((eachPerson) => {
+        if(eachPerson.isFriend === true) {
+            return `<li class= "js_li selected" id="${eachPerson.id}"><article>
+            <img src=${eachPerson.picture} alt="foto personaje" class="photo" />
+            <p>${eachPerson.name}</p>
+            <p>${eachPerson.location}</p>
+            <p>${eachPerson.userName}</p>
+            </article></li>`;
+        } else {
+            return `<li class= "js_li" id="${eachPerson.id}"><article>
+            <img src=${eachPerson.picture} alt="foto personaje" class="photo" />
+            <p>${eachPerson.name}</p>
+            <p>${eachPerson.location}</p>
+            <p>${eachPerson.userName}</p>
+            </article></li>`;
+        }
+    })
+    console.log(peopleMap);
+    for (const listEl of peopleMap) {
+        list.innerHTML += listEl;
+        
     }
 
-    addEventListeners(); 
-    
+    addEventListeners();  
+
 }

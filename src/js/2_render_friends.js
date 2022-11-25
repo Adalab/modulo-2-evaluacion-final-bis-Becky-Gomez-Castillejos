@@ -20,4 +20,26 @@ function handleClickCharacters(event) {
         event.currentTarget.classList.toggle("selected"); 
         console.log(people);
     }
+    
+
+
+    
+
+
+
+
+    
+
+    /*if (charactersInFavouritesIndex === -1) {
+        favouriteCharacters.push(selectedCharacter);
+
+        localStorage.setItem('favourites', JSON.stringify(favouriteCharacters));
+    }
+    else {
+        favouriteCharacters.splice(charactersInFavouritesIndex, 1);
+        localStorage.setItem('favourites', JSON.stringify(favouriteCharacters));
+    }
+
+    addFavourites();*/
+
 
